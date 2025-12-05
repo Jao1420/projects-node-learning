@@ -76,24 +76,31 @@ async function playRaceEngine(character1, character2){
 
         let block = await getRandoBlock();
         console.log(`Bloco: ${block}`);
-    }
-
-    let diceResult1= await diceRoll();
-    let diceResult2= await diceRoll();
-
-    let totalSkill1= 0;
-    let totalSkill2= 0;
     
-    if(block === "RETA"){
-        totalSkill1= diceResult1 + character1.VELOCIDADE;
-        totalSkill2= diceResult2 + character2.VELOCIDADE; 
-    }else if(block === "CURVA"){
-        totalSkill1= diceResult1 + character1.MANOBRABILIDADE;
-        totalSkill2= diceResult2 + character2.MANOBRABILIDADE; 
-    }else{
 
+        let diceResult1= await diceRoll();
+        let diceResult2= await diceRoll();
+
+        let totalSkill1= 0;
+        let totalSkill2= 0;
+
+        if(block === "RETA"){
+            totalSkill1= diceResult1 + character1.VELOCIDADE;
+            console.log(`O ${character1.NOME} tirou ${diceResult1} no dado!`);
+            totalSkill2= diceResult2 + character2.VELOCIDADE; 
+            console.log(`O ${character2.NOME} tirou ${diceResult2} no dado!`);
+        }else if(block === "CURVA"){
+            totalSkill1= diceResult1 + character1.MANOBRABILIDADE;
+            console.log(`O ${character1.NOME} tirou ${diceResult1} no dado!`);
+            totalSkill2= diceResult2 + character2.MANOBRABILIDADE; 
+            console.log(`O ${character2.NOME} tirou ${diceResult2} no dado!`);
+        }else{
+            totalSkill1= diceResult1 + character1.PODER;
+            console.log(`O ${character1.NOME} tirou ${diceResult1} no dado!`);
+            totalSkill2= diceResult2 + character2.PODER; 
+            console.log(`O ${character2.NOME} tirou ${diceResult2} no dado!`);
+        }
     }
-
 }
 
 // function main auto invoke
