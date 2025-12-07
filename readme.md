@@ -7,7 +7,7 @@
             </td>
             <td>
                 <b>Objetivo:</b>
-                <p>Mario Kart é uma série de jogos de corrida desenvolvida e publicada pela Nintendo. Nosso desafio será criar uma lógica de um jogo de vídeo game para simular confrontos como se fosse um Mario Kart, levando em consideração as regras e mecânicas abaixo.</p>
+                <p>Mario Kart é uma série de jogos de corrida desenvolvida e publicada pela Nintendo. Nosso desafio será criar uma lógica de um jogo de vídeo game para simular confrontos com personagens do Mario Kart, levando em consideração as regras e mecânicas abaixo.</p>
             </td>
         </tr>
     </table>

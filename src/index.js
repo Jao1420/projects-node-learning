@@ -67,6 +67,10 @@ async function getRandoBlock(){
     return result;
 }
 
+async function logRollResult(character1, diceResult, block, atribute){
+    console.log(`o jogador ${character1.Nome} tirou dado de ${blocks} ${diceResult} no dado!`);
+
+}
 // function to show the game engine type of blocks and rounds
 async function playRaceEngine(character1, character2){
 
@@ -86,19 +90,19 @@ async function playRaceEngine(character1, character2){
 
         if(block === "RETA"){
             totalSkill1= diceResult1 + character1.VELOCIDADE;
-            console.log(`O ${character1.NOME} tirou ${diceResult1} no dado!`);
             totalSkill2= diceResult2 + character2.VELOCIDADE; 
-            console.log(`O ${character2.NOME} tirou ${diceResult2} no dado!`);
+            await logRollResult(character1.NOME, diceResult1, block, "VELOCIDADE");
+           
         }else if(block === "CURVA"){
             totalSkill1= diceResult1 + character1.MANOBRABILIDADE;
-            console.log(`O ${character1.NOME} tirou ${diceResult1} no dado!`);
+           
             totalSkill2= diceResult2 + character2.MANOBRABILIDADE; 
-            console.log(`O ${character2.NOME} tirou ${diceResult2} no dado!`);
+           
         }else{
             totalSkill1= diceResult1 + character1.PODER;
-            console.log(`O ${character1.NOME} tirou ${diceResult1} no dado!`);
+           
             totalSkill2= diceResult2 + character2.PODER; 
-            console.log(`O ${character2.NOME} tirou ${diceResult2} no dado!`);
+           
         }
     }
 }
